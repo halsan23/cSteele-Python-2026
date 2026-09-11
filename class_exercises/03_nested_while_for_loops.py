@@ -1,5 +1,7 @@
 ###################################################
-# temp practice exercises for csteele Python class
+# Nesting While and For Loops
+# using emoji \U0001f600
+#badDoggy | 9/11/26
 ###################################################
 
 import os
