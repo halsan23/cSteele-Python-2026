@@ -5,26 +5,19 @@
 import os
 os.system('cls')
 
+from random import randint  # use randint(a, b) to generate a random number between a and b
 
-for num in range(1, 11):
-   print('\U0001f600' * num)
-print()
+number = randint(1,10)
+i = 0  # i should be incremented by one each iteration
 
+while number != 5:
+   i += 1
+   # print(f'Run number is: {i}')
+   # print(f'Random Number is: {number}\n')
+   number = randint(1,10)
 
-times = 10
-while times > 0:
-   print('\U0001f600' * times)
-   times -= 1
-print()
-
-
-spc = 9
-smiley = 1
-for num in range(1, 11):
-   print(' ' * spc + '\U0001f600' * num)
-   spc -= 1
-
-print()
+print('Random number generation between 1 and 10.\n')
+print(f'took {i + 1} runs to generate a random number of 5.')
 
 
 print('\n\n-- End of Line --\n')
