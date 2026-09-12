@@ -1,7 +1,7 @@
 ###################################################
 # Number Guess Game
 # using randint and loops
-#badDoggy | 9/11/26
+# badDoggy | 9/11/26
 ###################################################
 
 import os
