@@ -1,48 +1,65 @@
-###################################################
-# Number Guess Game
-# using randint and loops
-# badDoggy | 9/11/26
-###################################################
+###########################################################
+# Number Guessing Game
+# using randint, loops and Try/Except for input validation
+# badDoggy | 9/12/26
+###########################################################
 
+# Initial Setup
 import os
 from random import randint
 os.system('cls')
 
+#select a random number between 1 and 25
+number = randint(1,25)
 
 #Title Bar
-print('Can you guess my number between 1 and 10 ...')
-
-#select a random number between 1 and 10
-number = randint(1,10)
-# set initial guess to zero
-guess = 0
+print('Can you guess my number between 1 and 25 ...')
 
 
 # Run the game
-while guess != number:
-   # print(f'number is: {number}')  # debug code
-   guess = int(input('\nGuess my number: '))
+while True:
+   # input user's guess
+   guess = input('\nGuess my number or (Q)uit: ')
 
-   if guess > number:
-      print('Too High, try again:')
-      guess = 0
+   # option for user to end game early
+   if guess.lower() == 'q':
+      print('\nThanks for playing ...')
+      print('\n\n-- End of Line --\n')
+      break
 
-   elif guess < number:
-      print('Too Low, try again:')
-      guess = 0
+   # Try/Except for Input Validation
+   try:
+      value = int(guess)     # Attempt to convert input to an integer
+      if 1 <= value <= 25:   # Check if the value is within the range
 
-   else:
-      print(f'\n\nYou got me - My number was {number}')
+         # Input is a Valid Integer between 1 and 25
+         # check if guessed number is too high or too low
+         if value > number:
+               print('Too High, try again:')
+         elif value < number:
+            print('Too Low, try again:')
 
-      again = input('\nPlay Again (Y/N)? ')
-      if again.lower() == "n":
-         print('\nThanks for playing ...')
+         # correct guess - ask to play again
+         else:
+            print(f'\n\nYou got me - My number was {number}')
+            again = input('\nPlay Again (Y/N)? ')
 
+            # end game if user selects not to play again
+            if again.lower() == "n":
+               print('\nThanks for playing ...')
+               print('\n\n-- End of Line --\n')
+               break
+
+            # setup to play again
+            else:
+               os.system('cls')
+               number = randint(1,25)
+               print('Can you guess my number between 1 and 25 ...')
+
+      # if user inputs an integer outside the range of 1-10
       else:
-         os.system('cls')
-         number = randint(1,10)
-         guess = 0
-         print('Can you guess my number between 1 and 10 ...')
+         print("Invalid input: The number must be between 1 and 25.")
 
-
-print('\n\n-- End of Line --\n')
+   # if user inputs a non-integer
+   except ValueError:
+        print("Invalid input: Please enter a number must be between 1 and 25.")
