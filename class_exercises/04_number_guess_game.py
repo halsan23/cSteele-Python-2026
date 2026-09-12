@@ -5,9 +5,10 @@
 ###########################################################
 
 # Initial Setup
+import subprocess
 import os
 from random import randint
-os.system('cls')
+subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True)
 
 #select a random number between 1 and 25
 number = randint(1,25)
@@ -52,7 +53,7 @@ while True:
 
             # setup to play again
             else:
-               os.system('cls')
+               subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True)
                number = randint(1,25)
                print('Can you guess my number between 1 and 25 ...')
 
