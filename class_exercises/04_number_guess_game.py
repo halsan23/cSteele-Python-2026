@@ -8,12 +8,15 @@
 import subprocess
 import os
 from random import randint
-subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True)
 
 #select a random number between 1 and 25
 number = randint(1,25)
 
+# Clear Screen
+subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True)
+
 #Title Bar
+print('Number Guessing Game')
 print('Can you guess my number between 1 and 25 ...')
 
 
@@ -53,11 +56,12 @@ while True:
 
             # setup to play again
             else:
-               subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True)
                number = randint(1,25)
+               subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True)
+               print('Number Guessing Game')
                print('Can you guess my number between 1 and 25 ...')
 
-      # if user inputs an integer outside the range of 1-10
+      # if user inputs an integer outside the range of 1-25
       else:
          print("Invalid input: The number must be between 1 and 25.")
 
