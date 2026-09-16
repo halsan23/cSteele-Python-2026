@@ -14,7 +14,7 @@ miles = float(input("Input number of miles to convert? "))
 
 
 # convert the miles to kilometers, round to 2 decimal places
-kms = round(miles*1.609344, 2)
+kms = round(miles * 1.609344, 2)
 
 
 # Display the output using "f-string"

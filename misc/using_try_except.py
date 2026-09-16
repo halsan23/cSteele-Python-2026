@@ -3,7 +3,8 @@
 ###################################################
 
 import os
-os.system('cls')
+
+os.system("cls")
 
 
 # To trap an input and ensure it is an integer between 1 and 10, use a loop with a try/except block to convert the input to an integer and check the range.
@@ -26,9 +27,9 @@ while True:
     user_input = input("Please enter an integer between 1 and 10: ")
     try:
         value = int(user_input)  # Attempt to convert input to an integer
-        if 1 <= value <= 10:     # Check if the value is within the range
+        if 1 <= value <= 10:  # Check if the value is within the range
             print("Valid input:", value)
-            break                  # Exit the loop if input is valid
+            break  # Exit the loop if input is valid
         else:
             print("Error: The number must be between 1 and 10.")
     except ValueError:
@@ -45,6 +46,4 @@ while True:
 # This approach ensures that the program only accepts valid integers within the specified range, providing a user-friendly experience.
 
 
-
-
-print('\n\n-- End of Line --\n')
+print("\n\n-- End of Line --\n")
