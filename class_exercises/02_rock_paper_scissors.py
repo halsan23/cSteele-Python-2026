@@ -29,13 +29,13 @@ def reset():
 # function for Title Bar
 def title_bar():
     print(
-        f"User Score: {user_score} | Computer Score: {comp_score} | Tie Games: {tie_score}\n"
+        f" User Score: {user_score} | Computer Score: {comp_score} | Tie Games: {tie_score}\n"
     )
-    print("*****************************")
-    print("*  Rock - Paper - Scissors  *")
-    print("*    Player vs. Computer    *")
-    print("*      Best 3 out of 5      *")
-    print("*****************************\n")
+    print(" *****************************")
+    print(" *  Rock - Paper - Scissors  *")
+    print(" *    Player vs. Computer    *")
+    print(" *      Best 3 out of 5      *")
+    print(" *****************************\n")
 
 
 # function to test for win
@@ -89,7 +89,7 @@ while True:
     title_bar()
 
     # User Input
-    user = input("Enter Your Choice: ").lower()
+    user = input("Enter Rock, Paper, Scissors or (Q)uit to end the game: ").lower()
 
     # option for user to end game early
     if user.lower() == "q" or user.lower() == "quit":
