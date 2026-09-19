@@ -1,0 +1,32 @@
+Lists (aka array's in Js)
+
+
+.clear()
+- list.clear()  | deletes all items in a list
+
+
+.pop() : removes an item from a list and RETURNS item
+    - variable = list.pop() assigns last item to variable
+        - the returned item does not have to be used if you just want it removed from the list
+- list.pop()    | remove the last item from a list
+- list.pop(x)   | removes single item from list @ list(x)
+
+
+.remove()
+    - removes the first item from a list meeting the designated criteria
+list.remove(list_item)  | remove the first item in list that matches list_item
+                        | this only removes the 1st matching item if there are multiple instances of list_item
+                        | DOES NOT RETURN ANYTHING!
+
+
+.index()
+- example: [5, 5, 6, 7, 5, 8, 8, 9, 10]
+    - returns the INDEX number of the first item in a list
+
+- list.index(5) | returns 0 because the first 5 is at index 0 in the list
+- list.index(8) | returns 5 because the first 8 is at index 5 in the list
+
+you can also define a range for the indexing
+- list.index(5, 2) | returns 4 because the first 5 (starting from index 2) is at index 4 in the list
+- list.index(8, 6, 8) | looks for 1st match between indexes 6 to 8 so it returns 6 because index(6)
+    is the 1st instance of 8 within the range of 6 to 8
