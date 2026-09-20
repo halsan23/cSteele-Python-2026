@@ -7,14 +7,14 @@ List Methods (Lists are same as array's in Js)
 -------------------------------------------------------------
 
 len() : returns how many items are in the list
-- example [5, 7, 'Hello', 42]
+- example: list = [5, 7, 'Hello', 42]
 
     - len(list) returns 4 because there are 4 items in the list
 
 -------------------------------------------------------------
 
 .count() : returns the number of times an item appears in a list
-- example: [5, 5, 6, 7, 5, 8, 8, 9, 10]
+- example: list = [5, 5, 6, 7, 5, 8, 8, 9, 10]
 
     - list.count(5) | returns 3 because there are 3 fives
     - list.count(8) | returns 2 because there are 2 eights
@@ -23,7 +23,7 @@ len() : returns how many items are in the list
 -------------------------------------------------------------
 
 .index()
-- example: [5, 5, 6, 7, 5, 8, 8, 9, 10]
+- example: list = [5, 5, 6, 7, 5, 8, 8, 9, 10]
     - returns the INDEX number of the first item in a list
 
     - list.index(5) | returns 0 because the first 5 is at index 0 in the list
@@ -39,7 +39,7 @@ len() : returns how many items are in the list
 -------------------------------------------------------------
 
 .append() : add a single item to the end of a list
-- example: [1, 2, 3, 4]
+- example: list = [1, 2, 3, 4]
 
     list.append(6) | gives you [1, 2, 3, 4, 6] (added 6 to the end of the list)
 
@@ -53,7 +53,7 @@ len() : returns how many items are in the list
     - works like append() but allows you to add multiple items at one times
     - the items are added as a list
 
-example: [1, 2, 3]
+- example: list = [1, 2, 3]
 
     list.extend([4, 'Blue', 'Fred']) : gives you [1, 2, 3, 4, 'Blue', 'Fred']
 
@@ -63,7 +63,7 @@ example: [1, 2, 3]
     - append and extend only allow you to add item(s) the the END of a list
     - insert allows you to add items anywhere within the list
 
-- example: [1, 2, 3, 4]
+- example: list = [1, 2, 3, 4]
 
     - list.insert(2, 'Hi') : gives you [1, 2, 'Hi, 3, 4] | it inserted 'Hi' at position 2
 
@@ -71,7 +71,7 @@ example: [1, 2, 3]
 
 .pop() : removes an item from a list and RETURNS the list_item
     - list.pop()    | remove the last item from a list
-    - list.pop(x)   | removes single item from list @ list(x)
+    - list.pop(x)   | removes single item from list @ list position x
 
     - variable = list.pop() assigns last item to variable
         - the returned item does not have to be used - if you just want it removed from the list, don't assign it to a variable
@@ -79,7 +79,7 @@ example: [1, 2, 3]
 -------------------------------------------------------------
 
 .remove()
-    - removes the first item from a list meeting the designated criteria
+    - delete the first occurrence of a specified element from a list
     list.remove(list_item)  | remove the first item in list that matches list_item
                             | this only removes the 1st matching item if there are multiple instances of list_item
                             | DOES NOT RETURN ANYTHING!
@@ -87,14 +87,14 @@ example: [1, 2, 3]
 -------------------------------------------------------------
 
 .reverse() : reverses the order of the items in a list (in place, updates the list)
-- example: ['name1', 'name2', 'name3']
+- example: list = ['name1', 'name2', 'name3']
 
     list.reverse() | reverses the order to ['name3', 'name2', 'name1']
 
 -------------------------------------------------------------
 
 .sort() : sorts the list based on the sort criteria
-- example[6, 4, 3, 1, 2, 5]
+- example: list = [6, 4, 3, 1, 2, 5]
 
     - list.sort() | no sort criteria given, sorts ascending
         result | [1, 2, 3, 4, 5, 6]
@@ -115,3 +115,41 @@ example: [1, 2, 3]
         added a ', ' between each item in the original list, returned a NEW STRING
 
 -------------------------------------------------------------
+
+Slicing : Makes new lists using pieces from the original list
+        : First param is required
+
+Syntax : list[start:end:step]
+
+- example: list = [1, 2, 3, 4]
+
+    - list[10:] : returns an empty list [] because there is no position 10 in the original list, so there is no item at that location to retrieve
+
+   - list[1:] : returns [2, 3, 4] : starts from position 1 of the original list, and continues to the end of the original list, because no other parameters were designated
+
+   - list[3:] : returns [4] : because position 3 in the list is a 4, with 4 also being the end of the list
+
+You can also slice counting from the END of the original list using NEGATIVE numbers:
+
+    - list[-1:] : returns [4] : counts backwards from the end of the original list
+
+    - list[-3:] : returns [2, 3, 4] : counting backwards from the end 3 places gives us the [2] and no END designation was given
+
+Second param END: designates the stop point for the slice
+
+    - the end point is EXCLUSIVE - is not part of the returned list
+    - the first param for start point is optional - if not designated, starts at index [0]
+
+    - list[:2] : returns [1, 2]
+        - no start point was given so it starts at list[0]
+        - it designates the end point to be list[2], but this is EXCLUSIVE, so it only returns items at positions [0] and [1]
+
+    - list[:4] : returns [1, 2, 3, 4]
+        - no start point was given so it starts at list[0]
+        - it designates the end point to be list[4], but this is EXCLUSIVE, so it only returns items from positions [0] through [3]
+
+    - list[1:3] : returns [2, 3]
+        - start point designated at [1]
+        - end point designated at [3] (exclusive)
+
+Third param STEP: gives a way to "step" through the slice for example: step 2 will select every other item in the original list
