@@ -1,32 +1,117 @@
-Lists (aka array's in Js)
-
+List Methods (Lists are same as array's in Js)
+-------------------------------------------------------------
 
 .clear()
-- list.clear()  | deletes all items in a list
+    - list.clear()  | deletes all items in a list
 
+-------------------------------------------------------------
 
-.pop() : removes an item from a list and RETURNS item
-    - variable = list.pop() assigns last item to variable
-        - the returned item does not have to be used if you just want it removed from the list
-- list.pop()    | remove the last item from a list
-- list.pop(x)   | removes single item from list @ list(x)
+len() : returns how many items are in the list
+- example [5, 7, 'Hello', 42]
 
+    - len(list) returns 4 because there are 4 items in the list
 
-.remove()
-    - removes the first item from a list meeting the designated criteria
-list.remove(list_item)  | remove the first item in list that matches list_item
-                        | this only removes the 1st matching item if there are multiple instances of list_item
-                        | DOES NOT RETURN ANYTHING!
+-------------------------------------------------------------
 
+.count() : returns the number of times an item appears in a list
+- example: [5, 5, 6, 7, 5, 8, 8, 9, 10]
+
+    - list.count(5) | returns 3 because there are 3 fives
+    - list.count(8) | returns 2 because there are 2 eights
+    - list.count(2) | returns 0 because there no twos
+
+-------------------------------------------------------------
 
 .index()
 - example: [5, 5, 6, 7, 5, 8, 8, 9, 10]
     - returns the INDEX number of the first item in a list
 
-- list.index(5) | returns 0 because the first 5 is at index 0 in the list
-- list.index(8) | returns 5 because the first 8 is at index 5 in the list
+    - list.index(5) | returns 0 because the first 5 is at index 0 in the list
+    - list.index(8) | returns 5 because the first 8 is at index 5 in the list
 
-you can also define a range for the indexing
-- list.index(5, 2) | returns 4 because the first 5 (starting from index 2) is at index 4 in the list
-- list.index(8, 6, 8) | looks for 1st match between indexes 6 to 8 so it returns 6 because index(6)
-    is the 1st instance of 8 within the range of 6 to 8
+    you can also define a range for the indexing
+    - list.index(5, 2) | returns 4 because the first 5 (starting from index 2) is at index 4 in the list
+    - list.index(8, 6, 8) | looks for 1st match between indexes 6 to 8 so it returns 6 because index(6)
+        is the 1st instance of 8 within the range of 6 to 8
+
+    **Note : if you try an do an index for an item that the list does not contain, you will get an error message
+
+-------------------------------------------------------------
+
+.append() : add a single item to the end of a list
+- example: [1, 2, 3, 4]
+
+    list.append(6) | gives you [1, 2, 3, 4, 6] (added 6 to the end of the list)
+
+    and if we add another item
+
+    list.append('Green') | gives you [1, 2, 3, 4, 6, 'Green']
+
+-------------------------------------------------------------
+
+.extend()
+    - works like append() but allows you to add multiple items at one times
+    - the items are added as a list
+
+example: [1, 2, 3]
+
+    list.extend([4, 'Blue', 'Fred']) : gives you [1, 2, 3, 4, 'Blue', 'Fred']
+
+-------------------------------------------------------------
+
+.insert() : inserts an item at a given position in the list
+    - append and extend only allow you to add item(s) the the END of a list
+    - insert allows you to add items anywhere within the list
+
+- example: [1, 2, 3, 4]
+
+    - list.insert(2, 'Hi') : gives you [1, 2, 'Hi, 3, 4] | it inserted 'Hi' at position 2
+
+-------------------------------------------------------------
+
+.pop() : removes an item from a list and RETURNS the list_item
+    - list.pop()    | remove the last item from a list
+    - list.pop(x)   | removes single item from list @ list(x)
+
+    - variable = list.pop() assigns last item to variable
+        - the returned item does not have to be used - if you just want it removed from the list, don't assign it to a variable
+
+-------------------------------------------------------------
+
+.remove()
+    - removes the first item from a list meeting the designated criteria
+    list.remove(list_item)  | remove the first item in list that matches list_item
+                            | this only removes the 1st matching item if there are multiple instances of list_item
+                            | DOES NOT RETURN ANYTHING!
+
+-------------------------------------------------------------
+
+.reverse() : reverses the order of the items in a list (in place, updates the list)
+- example: ['name1', 'name2', 'name3']
+
+    list.reverse() | reverses the order to ['name3', 'name2', 'name1']
+
+-------------------------------------------------------------
+
+.sort() : sorts the list based on the sort criteria
+- example[6, 4, 3, 1, 2, 5]
+
+    - list.sort() | no sort criteria given, sorts ascending
+        result | [1, 2, 3, 4, 5, 6]
+
+    **Note: Uppercase sorts BEFORE lowercase
+
+-------------------------------------------------------------
+
+.join() :
+    - technically a String Method that takes an iterable object
+    - CONCATENATES (combines) a copy of the base string BETWEEN each item in the iterable (list)
+    - returns a new string
+    - most often used to make sentences out of a list of words by joining on a space
+
+    - example ['Tom', 'Dick', 'Harry']
+
+    ', '.join(list.) returns: 'Tom, Dick, Harry'
+        added a ', ' between each item in the original list, returned a NEW STRING
+
+-------------------------------------------------------------
