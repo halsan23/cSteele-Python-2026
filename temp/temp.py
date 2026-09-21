@@ -1,29 +1,22 @@
 # Clear Screen
 import subprocess
 import os
+
 subprocess.run("cls" if os.name == "nt" else "clear", shell=True)
 
 
-# Create a list called instructors
-instructors = []
+# Class Practice Problems
 
-# Add the following strings to the instructors list
-    # "Colt"
-    # "Blue"
-    # "Lisa"
-instructors.extend(['Colt', 'Blue','Lisa'])
-print(instructors)
 
-# Remove the last value in the list
-instructors.pop()
-print(instructors)
+# answer = [char[0] for char in ["Elie", "Tim", "Matt"]]
+# print(answer)
 
-# Remove the first value in the list
-instructors.pop(0)
-print(instructors)
+# answer2 = [x for x in [1, 2, 3, 4, 5, 6] if x % 2 == 0]
+# print(answer2)
 
-# Add the string "Done" to the beginning of the list
-instructors.insert(0, 'Done')
 
-# Run the tests to make sure you've done this correctly!
-print(instructors)
+# answer = [item for item in [1, 2, 3, 4, ] if item in [3, 4, 5, 6]]
+# print(answer)
+
+# answer2 = [name[::-1].lower() for name in ["Ellie", "Tim", "Matt"]]
+# print(answer2)
