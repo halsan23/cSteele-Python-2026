@@ -38,6 +38,21 @@ len() : returns how many items are in the list
 
 -------------------------------------------------------------
 
+# Find if a list contains something
+# use the keyword - in
+
+- example: list = ['Bob', 'Ted', 'Ruth', 'Mary']
+    - 'Bob' in  list : returns True because 'Bob" IS IN the list
+    - 'Billy' in  list : returns False because 'Billy" IS NOT IN the list
+
+So we ca run logic tests to determine if something exists within a list
+    if 'Bob' in list:
+        run code for True result
+    else:
+        run code for False return
+
+-------------------------------------------------------------
+
 .append() : add a single item to the end of a list
 - example: list = [1, 2, 3, 4]
 

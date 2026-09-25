@@ -1,0 +1,75 @@
+Using Dictionary"s
+-------------------------------------------------------------
+
+- The keys in dictionaries must be one of the immutable data types (numbers, strings, tuples).
+
+- A dictionary value in Python can contain any type of object, including other dictionaries, lists, strings, numbers, and even user-defined objects. There are no restrictions on the types of values that can be stored in a dictionary.
+
+-------------------------------------------------------------
+
+Dictionary"s are either defined using "curly braces":
+
+Example1
+this_dictionary = {
+    "key1": 1,
+    "key2": 2,
+    "key3": "value3",
+    "key4": True
+}
+
+or by using the built in "DICT" method:
+
+Example2
+this_dictionary = dict(
+    key1=1, key2=2, key3="value3", key4=True
+)
+**NOTE : using this method you DO NOT place the "Key" name in quotes"
+
+-------------------------------------------------------------
+
+To see ALL of the key/values in a dictionary, simply print the dictionary
+    - print(this_dictionary)
+
+-------------------------------------------------------------
+
+To see ALL of the keys in a dictionary, use the .keys() method:
+    - print(this_dictionary.keys())
+
+-------------------------------------------------------------
+
+To see ALL of the values in a dictionary, use the .values() method:
+    - print(this_dictionary.values())
+
+-------------------------------------------------------------
+
+To  loop through ALL of the keys, values, or both keys and values in a dictionary, use the .items() method in a for in loop:
+
+for key, value in  this_dictionary.items():
+
+    to get the keys:
+        print(f"{key}")
+
+    to get the values:
+        print(f"{value}")
+
+    and to get both the keys and the values:
+        print(f"{key}: {value}")
+
+-------------------------------------------------------------
+
+To see if a dictionary contains a specific KEY:
+- use the IN keyword
+
+- example:
+
+    if "key1" in this_dictionary : returns True : (there IS a key named "key1" in this_dictionary)
+    if "anything" in this_dictionary : returns False : (there IS NOT a key named "anything" in this_dictionary)
+
+**Remember: this method only searches the KEYS for a match
+
+To search if a specific VALUE is in a dictionary, use the .values() method:
+
+    if 2 in this_dictionary.values() : returns True : (there IS a value 2, in this_dictionary)
+    if "anything" in this_dictionary.values() : returns False : (there IS NOT a value "anything" in this_dictionary)
+
+-------------------------------------------------------------

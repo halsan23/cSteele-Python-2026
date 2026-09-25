@@ -5,17 +5,32 @@ import os
 subprocess.run("cls" if os.name == "nt" else "clear", shell=True)
 
 
-# DON'T TOUCH PLEASE!
-donations = dict(
-    sam=25.0, lena=88.99, chuck=13.0, linus=99.5, stan=150.0, lisa=50.25, harrison=10.0
-)
-# DON'T TOUCH PLEASE!
+this_dictionary = dict(key1=1, key2=2, key3="value3", key4=True)
 
 
-# Use a loop to add together all the donations and store the resulting number in a variable called total_donations
-total_donations = 0
+print(this_dictionary)
+print()
+print(this_dictionary.keys())
+print()
+print(this_dictionary.values())
+print()
 
-for val in donations.values():
-    total_donations += val
+print("Keys:")
+for key, value in this_dictionary.items():
+    print(f"{key}")
 
-print(total_donations)
+print("\nValues:")
+for key, value in this_dictionary.items():
+    print(f"{value}")
+
+print("\nBoth:")
+for key, value in this_dictionary.items():
+    print(f"{key}: {value}")
+
+if "garbage" not in this_dictionary:
+    print(False)
+
+
+print()
+print()
+print("- - End of Line - -")
