@@ -1,7 +1,14 @@
 Using Dictionary"s
 -------------------------------------------------------------
 
-- The keys in dictionaries must be one of the immutable data types (numbers, strings, tuples).
+In Python:
+    - A List is an ORDERED collection that ALLOWS DUPLICATE ELEMENTS and is accessed using INDICES.
+    - A Dictionary is an UNORDERED collection of KEY-VALUE PAIRS that DOES NOW ALLOW DUPLICATE KEYS and is accessed using UNIQUE KEYS.
+
+-------------------------------------------------------------
+
+
+- The keys in a dictionary must be one of the immutable data types (numbers, strings, tuples).
 
 - A dictionary value in Python can contain any type of object, including other dictionaries, lists, strings, numbers, and even user-defined objects. There are no restrictions on the types of values that can be stored in a dictionary.
 
@@ -71,5 +78,42 @@ To search if a specific VALUE is in a dictionary, use the .values() method:
 
     if 2 in this_dictionary.values() : returns True : (there IS a value 2, in this_dictionary)
     if "anything" in this_dictionary.values() : returns False : (there IS NOT a value "anything" in this_dictionary)
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+Dictionary Methods:
+
+-------------------------------------------------------------
+
+.clear()
+    - clears ALL of the keys AND values in a dictionary
+
+- example:
+
+    this_dictionary.clear()
+        - removes ALL of the keys and values stored within
+
+-------------------------------------------------------------
+
+.copy()
+    - makes a copy of the specified dictionary
+
+- example:
+
+    new_dictionary = this_dictionary.copy()
+        - makes an exact copy with the new dictionary name
+
+-------------------------------------------------------------
+
+.get()
+
+    - Retrieves a key in a dictionary or object, the returns either the key 'value', or None if there is no match.
+    - this method does not throw an error.
+
+- example:
+
+    - this_dictionary.get('key3') returns 'value3' (the stored value of 'key3')
+    - this_dictionary.get('key5') returns None - there is no 'key5' in this_dictionary
 
 -------------------------------------------------------------

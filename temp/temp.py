@@ -5,30 +5,26 @@ import os
 subprocess.run("cls" if os.name == "nt" else "clear", shell=True)
 
 
-this_dictionary = dict(key1=1, key2=2, key3="value3", key4=True)
+game_properties = [
+    "current_score",
+    "high_score",
+    "number_of_lives",
+    "items_in_inventory",
+    "power_ups",
+    "ammo",
+    "enemies_on_screen",
+    "enemy_kills",
+    "enemy_kill_streaks",
+    "minutes_played",
+    "notifications",
+    "achievements",
+]
 
 
-print(this_dictionary)
-print()
-print(this_dictionary.keys())
-print()
-print(this_dictionary.values())
-print()
+initial_game_state = dict.fromkeys(game_properties, 0)
 
-print("Keys:")
-for key, value in this_dictionary.items():
-    print(f"{key}")
-
-print("\nValues:")
-for key, value in this_dictionary.items():
-    print(f"{value}")
-
-print("\nBoth:")
-for key, value in this_dictionary.items():
+for key, value in initial_game_state.items():
     print(f"{key}: {value}")
-
-if "garbage" not in this_dictionary:
-    print(False)
 
 
 print()

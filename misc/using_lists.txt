@@ -1,6 +1,12 @@
 List Methods (Lists are same as array's in Js)
 -------------------------------------------------------------
 
+In Python:
+    - A List is an ORDERED collection that ALLOWS DUPLICATE ELEMENTS and is accessed using INDICES.
+    - A Dictionary is an UNORDERED collection of KEY-VALUE PAIRS that DOES NOW ALLOW DUPLICATE KEYS and is accessed using UNIQUE KEYS.
+
+-------------------------------------------------------------
+
 .clear()
     - list.clear()  | deletes all items in a list
 

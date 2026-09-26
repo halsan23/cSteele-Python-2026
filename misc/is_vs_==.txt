@@ -1,0 +1,30 @@
+is vs == (double equals)
+
+-------------------------------------------------------------
+
+The == operator:
+    - used to compare the values of two objects. It checks if the contents of the objects are the same, regardless of whether they are stored in the same memory location. Here are some key points:
+
+        - Returns True: If the values of the two objects are equal.
+        - Returns False: If the values are not equal.
+
+-------------------------------------------------------------
+
+The is operator:
+
+    - The is operator checks if two objects are identical, meaning they refer to the same memory location. This is important for understanding how Python handles object references. Here are the main aspects:
+
+        - Returns True: If both variables point to the same object in memory.
+        - Returns False: If they are different objects, even if their values are the same.
+
+-------------------------------------------------------------
+
+So if you say:
+    if 5 == 5:
+        This returns True because 5 does equal 5. They are the same value.
+
+But if you say:
+    if 5 is 5:
+        This returns False because while 5 does equal 5, they both take up different places in memory.
+
+-------------------------------------------------------------
