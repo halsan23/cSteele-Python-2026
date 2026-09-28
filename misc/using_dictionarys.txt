@@ -16,21 +16,21 @@ In Python:
 
 Dictionary"s are either defined using "curly braces":
 
-Example1
-this_dictionary = {
-    "key1": 1,
-    "key2": 2,
-    "key3": "value3",
-    "key4": True
-}
+- Example1
+    this_dictionary = {
+        "key1": 1,
+        "key2": 2,
+        "key3": "value3",
+        "key4": True
+    }
 
-or by using the built in "DICT" method:
+    or by using the built in "DICT" method:
 
-Example2
-this_dictionary = dict(
-    key1=1, key2=2, key3="value3", key4=True
-)
-**NOTE : using this method you DO NOT place the "Key" name in quotes"
+- Example2
+    this_dictionary = dict(
+        key1=1, key2=2, key3="value3", key4=True
+    )
+    **NOTE : using this method you DO NOT place the "Key" name in quotes"
 
 -------------------------------------------------------------
 
@@ -115,5 +115,67 @@ Dictionary Methods:
 
     - this_dictionary.get('key3') returns 'value3' (the stored value of 'key3')
     - this_dictionary.get('key5') returns None - there is no 'key5' in this_dictionary
+
+-------------------------------------------------------------
+
+.pop()
+    - used to remove a key/value pair from a dictionary, based on a specified key. It also RETURNS THE VALUE associated with the specified key.
+
+    - Syntax
+        - this_dictionary.pop(key[, default])
+
+    - Parameters
+            - key: The key of the item you want to remove.
+            - default (optional): A value to return if the specified key is not found.
+                **Note: If this is not provided, a KeyError will be raised.
+
+    - Return Value
+        - If the key exists, pop() RETURNS THE VALUE OF THE REMOVED ITEM.
+        - If the key does not exist and a default value is provided, it returns the default value.
+        - If the key does not exist and no default value is provided, IT RAISES A KeyError.
+
+-------------------------------------------------------------
+
+.popitem{}
+
+    - removes a random key/value pair from a dictionary
+    - does not take any arguments
+
+    - Syntax
+        - this_dictionary.pop()
+
+-------------------------------------------------------------
+
+.update()
+
+    - used to add new key-value pairs or modify existing ones using another dictionary, iterable of pairs or keyword arguments. If a key already exists, its value is replaced. If the key does not exist, it is added to the dictionary.
+
+- examples:
+
+    - d = {'x': 10}
+    - d.update({'y': 20})
+    - changes d to {'x': 10, 'y': 20,}
+        - added {'y': 20} to dictionary
+
+    - d = {'A': 1, 'B': 2}
+    - d.update({'B': 5, 'C': 7})
+    - changes d to {'A': 1, 'B': 5, 'C': 7}
+        - replaces value of 'B' and adds 'C'
+
+    - d = {'a': 5, 'b': 8}
+    - d.update({'a': 50})
+    - changes d to {'a': 50, 'b': 8}
+        - changes 'a' value tp 50
+
+    - d = {'p': 1}
+    - d.update(q=2, r=3)
+    - changes d to {'p': 1, 'q': 2, 'r': 3}
+        - took the arguments and added them as new keys
+
+    - this_dictionary = dict(key1=1, key2=2, key3="value3", key4=True)
+    - new_dictionary = {'a': 1}
+    - new_dictionary.update(this_dictionary)
+    - changes new_dictionary to {'a': 1, 'key1': 1, 'key2': 2, 'key3': ="value3", 'key4': True}
+        - added the entire contents of this_dictionary to new_dictionary
 
 -------------------------------------------------------------

@@ -5,26 +5,24 @@ import os
 subprocess.run("cls" if os.name == "nt" else "clear", shell=True)
 
 
-game_properties = [
-    "current_score",
-    "high_score",
-    "number_of_lives",
-    "items_in_inventory",
-    "power_ups",
-    "ammo",
-    "enemies_on_screen",
-    "enemy_kills",
-    "enemy_kill_streaks",
-    "minutes_played",
-    "notifications",
-    "achievements",
-]
+inventory = {"croissant": 19, "bagel": 4, "muffin": 8, "cake": 1}
+print("original list | {'croissant': 19, 'bagel': 4, 'muffin': 8, 'cake': 1}")
 
 
-initial_game_state = dict.fromkeys(game_properties, 0)
+print('\n\nMake a copy of inventory and save it to a variable called "stock_list"')
+stock_list = {}
+stock_list.update(inventory)
+print(f"stock_list | {stock_list}")
 
-for key, value in initial_game_state.items():
-    print(f"{key}: {value}")
+
+print('\n\nadd the value 18 to stock_list under the key "cookie"')
+stock_list.update({"cookie": 18})
+print(f"stock_list | {stock_list}")
+
+
+print("\n\nremove 'cake' from 'stock_list' USE A DICTIONARY METHOD")
+stock_list.pop("cake", "Key Not Found")
+print(f"stock_list | {stock_list}")
 
 
 print()
