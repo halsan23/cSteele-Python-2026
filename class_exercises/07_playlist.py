@@ -44,6 +44,4 @@ for song in playlist["songs"]:
 print(f"\nTotal Time: {total_time}")
 
 
-print()
-print()
-print("- - End of Line - -")
+print("\n\n- - End of Line - -\n")
